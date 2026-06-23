@@ -11,6 +11,8 @@ interface AuthPageProps {
   onAuthenticated: () => void;
 }
 
+
+
 export default function AuthPage({ onAuthenticated }: AuthPageProps) {
   const [mode, setMode] = useState<Mode>('login');
   const [fullName, setFullName] = useState('');
@@ -148,7 +150,7 @@ export default function AuthPage({ onAuthenticated }: AuthPageProps) {
             </div>
 
             <button type="submit" disabled={loading}
-              className="w-full bg-orange-500 hover:bg-orange-600 disabled:bg-orange-300 text-white font-semibold py-3 rounded-lg transition-colors text-sm flex items-center justify-center gap-2 shadow-md">
+              className="w-full bg-green-500 hover:bg-green-600 disabled:bg-white-300 text-white font-semibold py-3 rounded-lg transition-colors text-sm flex items-center justify-center gap-2 shadow-md">
               {loading ? <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" /> : mode === 'login' ? <><LogIn size={16} /> Sign In</> : <><UserPlus size={16} /> Create Account</>}
             </button>
           </form>
